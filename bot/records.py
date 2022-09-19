@@ -21,7 +21,7 @@ def record(func):
                 member = {'status': 'joined'}
             if member['status'] == 'left':
                 return await update.message.reply_html(
-                    text= '❕ <b>برای استفاده از ربات باید ابتدا در چنل زیر عضو شده و سپس دستور مورد نظر خود را مجددا انتخاب کنید.</b>\n\n☑️ @FPLClub',
+                    text= f'❕ <b>برای استفاده از ربات باید ابتدا در چنل زیر عضو شده و سپس دستور مورد نظر خود را مجددا انتخاب کنید.</b>\n\n☑️ @{CHANNEL}',
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('عضویت' , url=f'https://t.me/{CHANNEL[1:]}')]]))
                 
             if ADMIN != user.id:
